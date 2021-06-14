@@ -77,6 +77,6 @@ router.delete('/:id', async (req,res) =>{
 })
 
 
-// function saveArticleAndRedirect(path){}
+
 
 module.exports = router
