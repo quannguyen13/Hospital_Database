@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+      <h1 class="bm-4">Patients Data</h1>
+      <a href="/articles/new" class="btn btn-success">Enter Data</a>
+      <% articles.forEach(article => { %>
+            <div class="card mt-4">
+                <div class="card-body">
+<h4 class="card-title"><%= article.title %></h4>
+<div class="card-subtitle text-muted mb-2">
+<%= article.createdAt.toLocaleDateString() %>
+</div>
+<div class="card-text mb-2"><%= article.description%> </div>
+<a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
+
+<form action="/articles/<%= article.id %>?_method=delete" method="POST" class="d-inline">
+<!-- <input type="submit" class="btn btn-danger" value="Delete"> -->
+<button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+
+
+
+</div>
+</div>
+
+
+
+
+        <% }) %>
+  </div>
+</body>
+</html>
