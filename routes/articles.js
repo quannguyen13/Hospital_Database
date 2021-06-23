@@ -12,12 +12,6 @@ router.get('/index', async (req,res) => {
 res.render('articles/index',{ articles: articles})
 })
 
-//-------------Search Page---------------////////
-router.get('/articles/search', async (req,res) => {
-    const articles = await Article.find().sort( {createdAt: 'desc' })
-res.render('articles/search',{ articles: articles})
-})
-
 
 
 ///-----------------Add "new" page----------------------------///
