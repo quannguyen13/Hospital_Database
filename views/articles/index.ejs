@@ -11,24 +11,28 @@
     crossorigin="anonymous"/>
     <title>Document</title>
 </head>
-<body>
+<body style="background: linear-gradient(to left, #2980b9, #2c3e50);">
   <div class="container">
-      <h1 class="bm-4">Patients Data</h1>
+      <h1 class="bm-4" style="color: white;">Patients Data</h1>
       <a href="/articles/new" class="btn btn-success">Enter Data</a>
+      <a href="/" class="btn btn-danger" style="float: right;">Log Out</a>
+      <!-- <a href="/articles/search" class="btn btn-info">Search Data</a> -->
+      
       <% articles.forEach(article => { %>
             <div class="card mt-4">
                 <div class="card-body">
 <h4 class="card-title"><%= article.title %></h4>
-<div class="card-subtitle text-muted mb-2">
-<%= article.createdAt.toLocaleDateString() %>
+<div class="card-subtitle text-muted mb-2"><span class="badge badge-warning">DOB: </span> 
+<%= article.dob %>
 </div>
-<div class="card-text mb-2"><%= article.description%> </div>
+<div class="card-text mb-2"><span class="badge badge-warning">Phone: </span> <%= article.phone%> </div>
 <a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
 
 <form action="/articles/<%= article.id %>?_method=delete" method="POST" class="d-inline">
-<!-- <input type="submit" class="btn btn-danger" value="Delete"> -->
-<button type="submit" class="btn btn-danger">Delete</button>
-</form>
+  <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+  
+  
 
 
 

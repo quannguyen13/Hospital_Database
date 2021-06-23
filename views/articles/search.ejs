@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body style=" background: linear-gradient(to right, #0f0c29, #302b63, #24243e); color: black; font-weight: bolder;">
+
+  <div class="container">
+      <h1 class="bm-4" style="color: blanchedalmond;">Patients Data</h1>
+    <div>
+      <div >
+      <form class="form-inline" action="/articles/search" method="GET">
+        <input type="text" class="form-control rounded" placeholder="Name" name="search" id="titile" aria-label="Search"
+        aria-describedby="search-addon" style="width: 48.7rem; margin-right: 5px;" required>
+        <input class="btn btn-info mr-1"  type="submit" value="Search" class="btn btn-default" >
+        <br>
+        <br>
+        <!-- <button class="btn btn-info mr-1" type="submit">Advance Search</button> -->
+        <a href="/articles/search" class="btn btn-dark mr-1" >Refresh</a>
+        <a href="/index" class="btn btn-secondary " style=" display: blocks;">Back</a>
+      </div>
+
+     
+      
+
+    
+        <%- include('_form_search') %>
+
+      </form>
+
+</div>
+
+
+
+
+</body>
+</html>

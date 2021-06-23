@@ -1,0 +1,19 @@
+<div>
+    <% articles.forEach(article => { %>
+        <div class="card mt-4">
+            <div class="card-body">
+<h4 class="card-title"><%= article.title %></h4>
+<div class="card-subtitle text-muted mb-2"><span class="badge badge-warning">DOB: </span> 
+<%= article.dob %>
+</div>
+<div class="card-text mb-2"><span class="badge badge-warning">Phone: </span> <%= article.phone%> </div>
+<a href="<%= article.slug %>" class="btn btn-primary">Read More</a>
+
+<form action="/articles/<%= article.id %>?_method=delete" method="POST" class="d-inline">
+<button type="submit" class="btn btn-danger">Delete</button>
+
+
+</div>
+</div>
+<% }) %>
+</div>

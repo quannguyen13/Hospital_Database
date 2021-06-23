@@ -1,62 +1,48 @@
+<!-- ------- Name ---------- -->
 <div class="form-group">
-    <label for="title">Name.</label>
-    <input required value="<%= article.title %>" type="text" name="title" id='title'
-    class="form-control">
+    <label for="title">Full Name:</label>
+    <input value="<%= article.title %>" type="text" name="title" id='title'
+    class="form-control" placeholder="First, Last">
 </div>
+
+
+<!-- ------- DOB ---------- -->
 <div class="form-group">
-    <label for="description">Description.</label>
+    <label for="dob">Date Of Birth:</label>
+    <input required value="<%= article.dob %>" type="text" name="dob" id='dob'
+    class="form-control" placeholder="MM/DD/YYYY">
+</div>
+
+<!-- ------- Phone ---------- -->
+<div class="form-group">
+    <label for="phone">Phone:</label>
+    <input required value="<%= article.phone %>" name="phone" id="phone" class="form-control" placeholder="###-###-####">
+</div>
+
+<!-- ------- Description ---------- -->
+<div class="form-group">
+    <label  for="description">Description:</label>
     <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
 </div>
+
+
+<!-- ------- treatment ---------- -->
 <div class="form-group">
-    <label for="markdown">Address.</label>
-    <textarea required name="markdown" id="markdown" class="form-control"><%= article.markdown %></textarea>
+    <label for="treatment">Treatment(s):</label>
+    <textarea name="treatment" id="treatment" class="form-control" placeholder="#, #, #"><%= article.treatment %></textarea>
 </div>
 
 
-<a href="/" class="btn btn-secondary">Cancel</a>
+<!-- ------- Address ---------- -->
+<div class="form-group">
+    <label for="markdown">Address:</label>
+    <textarea name="markdown" id="markdown" rows="6" class="form-control"><%= article.markdown %></textarea>
+</div>
+
+
+<a href="/index" class="btn btn-secondary">Cancel</a>
 <button type="submit" class="btn btn-primary">Save</button>
 
 
 
 
-<!-- /////////////**********************/////////////// -->
-<!-- <div class="form-group">
-    <label for="title">Name.</label>
-    <input required type="text" name="title" id='title'
-    class="form-control">
-</div>
-<div class="form-group">
-    <label for="description">Address.</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
-</div>
-<div class="form-group">
-    <label for="description">Date Of Birth.</label>
-    <input required type="text" name="title" id='title'
-    class="form-control">
-</div>
-<div class="form-group">
-    <label for="description">Phone Number.</label>
-    <input required type="text" name="title" id='title'
-    class="form-control">
-</div>
-<div class="form-group">
-    <label for="description">Email.</label>
-    <input required type="text" name="title" id='title'
-    class="form-control">
-</div>
-<div class="form-group">
-    <label for="description">Description.</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
-</div>
-<div class="form-group">
-    <label for="description">Treatment(s).</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
-</div>
-<div class="form-group">
-    <label for="description">Isurance.</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
-</div>
-<div class="form-group">
-    <label for="description">Primary Doctor.</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
-</div> -->

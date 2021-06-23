@@ -11,19 +11,18 @@
     crossorigin="anonymous"/>
     <title>Document</title>
 </head>
-<body style="background: linear-gradient(to right, #d3cce3, #e9e4f0); font-weight: bolder;">
-
+<body>
   <div class="container" style="text-align: center;">
     <h1 class="mb-1"><%= article.title %></h1>
   
-<div class="text-muted mb-1">last updated:
+<div class="text-muted mb-1">recent visit:
     <%= article.createdAt.toLocaleDateString() %>
   </div>   
   </div>
  
   <div style="text-align: center;">
   <a href="/index" class="btn btn-info">Home</a>
-  <a href="/articles/edit/<%= article.id %>" class="btn btn-secondary">Edit</a>
+  <a href="/articles/edit/<%= article.slug %>" class="btn btn-secondary">Edit</a>
 <br>
 <br>
 <ul class="list-group">

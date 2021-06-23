@@ -18,12 +18,11 @@ app.use(methodOverride('_method'))
 
 
 
-
-app.get('/', async (req,res) => {
-    const articles = await Article.find().sort( {createdAt: 'desc' })
-res.render('articles/index',{ articles: articles})
+app.get('', (req,res) => {
+    res.render('articles/logIn')
 })
-app.use('/articles', articleRouter)
+
+app.use('/', articleRouter)
 
 
-app.listen(5000)
+app.listen(4000,  ()  => {console.log("Rinning localhost:4000")})
