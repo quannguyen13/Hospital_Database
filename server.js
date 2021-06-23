@@ -6,11 +6,26 @@ const mongoose = require('mongoose')
 const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 
-mongoose.connect('mongodb://localhost/patient', { 
+const mongoURI =
+process.env.NODE_ENV === 'production'
+? process.env.DB_URL
+: 'mongodb://localhost/patient'
+
+mongoose.connect(mongoURI, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true,
-    useFindAndModify: false,  })
+    useFindAndModify: false,  
+})
+.then((instance) =>
+console.log(`Connected to db: ${instance.connections[0].name}`)
+)
+.catch((error) => console.log('Connection failed!', error));
+
+app.set("port", process.env.PORT || 4000 )
+
+
+
     
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
@@ -25,4 +40,4 @@ app.get('', (req,res) => {
 app.use('/', articleRouter)
 
 
-app.listen(4000,  ()  => {console.log("Rinning localhost:4000")})
+app.listen(app.get("port"), () => {console.log(`Running port @ ${app.get("port")}`);})
