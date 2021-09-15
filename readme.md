@@ -9,7 +9,7 @@ https://project-2-hospital.herokuapp.com/
 <br>
 NO NEED TO CREATE ACCOUNT
 <br>
-just click sign in to test this app
+just click log in to test this app
 # MVP
 - As a user i expect to input, read and update data as needed. 
 - My patients data should include DOB, contact information, illness description and treatment(s).
